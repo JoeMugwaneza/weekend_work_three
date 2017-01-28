@@ -3,8 +3,15 @@
 # the first string, and false otherwise.
 
 def mutation?(base_word, mutation)
-
-end
+	base_word = base_word.split('')
+	mutation = mutation.split('')
+	if mutation.all?{ |letters| base_word.include?(letters) }
+		return true
+	else 
+		return false
+	end 
+	
+end 
 
 # Driver code - don't touch anything below this line.
 puts "TESTING mutation?..."
